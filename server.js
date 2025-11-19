@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
   res.json({ ok: true, path: req.path });
 });
 
-app.use('/test-jwt', testJwtRouter);
-app.use('/auth', authRouter);
-app.use('/users', userRouter);
+app.use('/api/test-jwt', testJwtRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/users', userRouter);
 
 
 module.exports = app;

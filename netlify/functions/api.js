@@ -1,11 +1,9 @@
-const express = require('express');
+// netlify/functions/api.js
 const serverless = require('serverless-http');
-const expressApp = require('../../server'); // this is your server.js app
+const app = require('../../server'); // server.js in the root
 
-const app = express();
-
-// Netlify will call paths like: /.netlify/functions/api/users
-// We mount your real app at that base so it sees just "/users", "/auth", etc.
-app.use('/.netlify/functions/api', expressApp);
-
-module.exports.handler = serverless(app);
+// Netlify invokes paths like: /.netlify/functions/api/api/users
+// basePath strips "/.netlify/functions" so Express sees "/api/users"
+module.exports.handler = serverless(app, {
+  basePath: '/.netlify/functions',
+});
