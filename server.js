@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(logger('dev'));
 
 // Routes go here
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
   res.send("Hello World!");
 });
 
