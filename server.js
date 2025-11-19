@@ -1,10 +1,10 @@
 // server.js
+import express, { Router } from "express";
 const dotenv = require('dotenv');
 dotenv.config();
 
 const express = require('express');
 const app = express();
-const router = Router();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const logger = require('morgan');
@@ -25,9 +25,8 @@ app.use(logger('dev'));
 
 // Routes go here
 app.get('/', (req, res) => {
-  res.json({ ok: true, path: req.path });
+  res.send("Hello World!");
 });
-router.get("/hello", (req, res) => res.send("Hello World!"));
 
 app.use('/test-jwt', testJwtRouter);
 app.use('/auth', authRouter);
