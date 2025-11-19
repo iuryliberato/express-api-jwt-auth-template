@@ -24,6 +24,4 @@ app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
 
 
-app.listen(3000, () => {
-  console.log('The express app is ready!');
-});
+
