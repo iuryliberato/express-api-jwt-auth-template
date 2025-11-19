@@ -7,9 +7,9 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const logger = require('morgan');
-const testJwtRouter = require('./controllers/test-jwt');
-const authRouter = require('./controllers/auth');
-const userRouter = require('./controllers/users')
+const testJwtRouter = require('../../controllers/test-jwt');
+const authRouter = require('../../controllers/auth')
+const userRouter = require('../../controllers/users')
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
