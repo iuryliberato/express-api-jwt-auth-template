@@ -27,4 +27,4 @@ app.use('/auth', authRouter);
 app.use('/users', userRouter);
 
 
-module.exports = app
+module.exports = app;
