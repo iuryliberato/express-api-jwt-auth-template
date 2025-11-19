@@ -1,5 +1,4 @@
 // server.js
-import express, { Router } from "express";
 const dotenv = require('dotenv');
 dotenv.config();
 
