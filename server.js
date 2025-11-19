@@ -26,6 +26,7 @@ app.use(logger('dev'));
 app.get('/', (req, res) => {
   res.json({ ok: true, path: req.path });
 });
+router.get("/hello", (req, res) => res.send("Hello World!"));
 
 app.use('/test-jwt', testJwtRouter);
 app.use('/auth', authRouter);
