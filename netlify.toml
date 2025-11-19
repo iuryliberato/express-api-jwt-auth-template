@@ -4,7 +4,7 @@
 
 [build]
   command = "echo \"no build\"" 
-  publish = "public"            
+  publish = "."            
 
 [[redirects]]
   from = "/api/*"
