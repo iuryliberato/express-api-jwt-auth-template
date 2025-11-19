@@ -27,6 +27,4 @@ app.use('/auth', authRouter);
 app.use('/users', userRouter);
 
 
-// app.listen(3000, () => {
-//   console.log('The express app is ready!');
-// });
+module.exports = server

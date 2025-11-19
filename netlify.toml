@@ -1,8 +1,13 @@
 [functions]
-  external_node_modules = ["express"]
+  external_node_modules = ["express", "mongoose", "morgan", "cors", "dotenv", "serverless-http"]
   node_bundler = "esbuild"
+
+[build]
+  command = "echo \"no build\"" 
+  publish = "public"            
+
 [[redirects]]
-  force = true
   from = "/api/*"
-  status = 200
   to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
