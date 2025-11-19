@@ -4,7 +4,6 @@ dotenv.config();
 
 const express = require('express');
 const app = express();
-const router = Router();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const logger = require('morgan');
