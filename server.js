@@ -19,6 +19,9 @@ app.use(express.json());
 app.use(logger('dev'));
 
 // Routes go here
+app.get('/', (req, res) => {
+  res.json({ ok: true, path: req.path });
+});
 app.use('/test-jwt', testJwtRouter);
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
